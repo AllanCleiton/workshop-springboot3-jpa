@@ -13,9 +13,7 @@ import jakarta.persistence.ManyToOne;
 @Embeddable
 public class OrderItemPK implements Serializable{
 	
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	
 	@ManyToOne
@@ -26,6 +24,8 @@ public class OrderItemPK implements Serializable{
 	@JoinColumn(name="product_id")
 	private Product product;
 	
+	
+	//getters and setters 
 	public Product getProduct() {
 		return product;
 	}
