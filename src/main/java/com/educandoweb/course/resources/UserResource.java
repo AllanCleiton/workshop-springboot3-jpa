@@ -49,7 +49,9 @@ public class UserResource {
 	
 	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<Void> delete(@PathVariable Long id){
-		service.delete(id);
+		User user = service.findById(id);
+		service.delete(user.getId());
+		
 		return ResponseEntity.noContent().build();
 	}
 	
